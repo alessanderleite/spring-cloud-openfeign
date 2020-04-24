@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.alessanderleite.app</groupId>
-	<artifactId>spring-cloud-openfeign</artifactId>
+	<artifactId>spring-cloud-openfeign-rest-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-openfeign</name>
-	<description>Spring Cloud OpenFeign</description>
+	<name>spring-cloud-openfeign-rest-api</name>
+	<description>Spring Cloud OpenFeign Rest Api</description>
 
 	<properties>
 		<java.version>1.8</java.version>
