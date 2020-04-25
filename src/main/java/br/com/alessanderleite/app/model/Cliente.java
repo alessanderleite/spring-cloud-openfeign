@@ -33,22 +33,26 @@ public class Cliente implements Serializable{
 	
 	private String nome;
 	
+	private int idade;
+	
 	@OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
 	@JoinColumns({@JoinColumn(name = "ID_HISTORICO", referencedColumnName = "ID", nullable = false)})
 	@JsonIgnore
 	private Historico historico;
 	
-	public Cliente() {}
-
-	public Cliente(Integer id, String nome, Historico historico) {
-		this.id = id;
-		this.nome = nome;
-		this.historico = historico;
+	public Cliente() {
+		
 	}
 
-	public Cliente(String nome, Historico historico) {
+	public Cliente(Integer id, String nome, int idade) {
+		this.id = id;
 		this.nome = nome;
-		this.historico = historico;
+		this.idade = idade;
+	}
+
+	public Cliente(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
 	}
 
 	public Integer getId() {
@@ -63,13 +67,23 @@ public class Cliente implements Serializable{
 		return nome;
 	}
 
+
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+	
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 
 	public Historico getHistorico() {
 		return historico;
 	}
+
 
 	public void setHistorico(Historico historico) {
 		this.historico = historico;
