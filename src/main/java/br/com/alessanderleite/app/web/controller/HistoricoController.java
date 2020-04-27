@@ -21,7 +21,8 @@ public class HistoricoController {
 		return ResponseEntity.ok().body(historicoBO.listaHistoricos());
 	}
 	
-	public ResponseEntity<?> buscarHistoricoClienteId(@PathVariable Integer id) {
+	@GetMapping("/{id}")
+	public ResponseEntity<?> buscarHistoricoClienteId(@PathVariable("id") Integer id) {
 		return ResponseEntity.ok().body(historicoBO.buscarById(id));
 	}
 }
